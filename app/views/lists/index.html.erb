@@ -1,2 +1,29 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <div><i class="fas fa-film"></i></div>
+    <div>
+      <p class="btn btn-light">My Lists</p>
+      <p class="btn btn-light">New List</p>
+    </div>
+  </div>
+</nav>
+
+<div class="banner_picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/OaVJQZ-nFD0)">
+  <p>Save any kind of movie</p>
+</div>
+
+<!-- <!%= image_tag "https://source.unsplash.com/OaVJQZ-nFD0", alt: "Movie", class: "banner_picture" %> -->
+
+<div class="container">
+  <div class="navbar">
+    <div><h3>My Lists</h3></div>
+    <div><p class="btn btn-success font-white">Create a movie list</p></div>
+  </div>
+  <div class="row row-cols-auto">
+    <% @lists.each do |list| %>
+      <div class="col list_picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1200x400/?<%= list.name.capitalize %>)">
+        <%= list.name.capitalize %>
+      </div>
+    <% end  %>
+  </div>
+</div>
