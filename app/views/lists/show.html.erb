@@ -1,17 +1,25 @@
 <div class="banner_picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1200x400/?<%= @list.name.capitalize %>)">
   <p><%= @list.name.capitalize %></p>
+  <p class="top-right btn-success p-2">
+    <% if Movie.count <= 1 %>
+      <%= Movie.count %> Movie
+    <% else %>
+      <%= Movie.count %> Movies
+    <% end %>
+  </p>
 </div>
-
+<!--
 <div class="container">
   <div class="navbar">
     <div><h3>Movies</h3></div>
     <div><p class="btn btn-success font-white">Add a movie</p></div>
   </div>
   <div class="row row-cols-auto">
-    <% @movies.each do |movie| %>
-      <div class="col list_picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1200x400/?<%= movie.name.capitalize %>)">
-        <%= list.movie.capitalize %>
+    <!% @movies.each do |movie| %>
+      <div class="col list_picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1200x400/?<!%= movie.name.capitalize %>)">
+        <!%= list.movie.capitalize %>
       </div>
-    <% end  %>
+    <!% end  %>
   </div>
 </div>
+-->
